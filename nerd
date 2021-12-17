@@ -110,7 +110,7 @@ function load_introduction() {
 
             text += "<div class='boks2'>";
                 text += "<br>";
-                text += "<h1 style='font-size:3em; display: block;'>Hey there, " + results.user.name + "!</h1>";
+                text += "<h1 style='font-size:3em; display: block;'>Hey! Wat leuk dat je er bent,, " + results.user.name + "!</h1>";
                 text += "<br><br><br><br>";
                 text += "<h2>" + functions.stats_intro + "</h2>";
             text += "</div>";
@@ -133,7 +133,7 @@ function load_movies() {
             text += "<div class='boks3'>";
                 text += "<h1>Movies!</h1>";
                 text += "<br><br><br>";
-                text += "<h2>You watched " + results.user.user_movies.data.movie_plays + " movies. That's a lot of movies!</h2><p>(or not, I am pre-programmed to say that)</p>"
+                text += "<h2>Je hebt gekeken naar " + results.user.user_movies.data.movie_plays + " films. Dat zijn een hele boel films!</h2><p>(of niet, weet ik veel gast. )</p>"
 
                 text += "<br><br>";
             text += "</div>";
@@ -141,7 +141,7 @@ function load_movies() {
             text += "<div class='boks3'>";
 
                 text += "<div class='boks2'>";
-                    text += top_list(results.user.user_movies.data.movies, "Your top movies", false, true);
+                    text += top_list(results.user.user_movies.data.movies, "Jouwn top films", false, true);
                 text += "</div>";
 
                 text += "<div class='boks2' style='padding: 0;'>";
@@ -410,7 +410,7 @@ function oldest_movie(array) {
                 html += "<br>Was it a 4K, UHD, 3D, Dolby Atmos remaster?";
                 html += '<br><br><img src="assets/img/old-man.svg" style="margin: auto; display: block; width: 15em;">';
             } else {
-                html += "<br>Enjoying the classics, huh?";
+                html += "<br>Enjoying the classics, huh? Boomer";
                 html += '<br><br><img src="assets/img/old-man.svg" style="margin: auto; display: block; width: 15em;">';
             }
         html += "</div>";
@@ -449,7 +449,7 @@ function completion_movie(user_movie_finishing_percent, single) {
             if(percent[0] > 89) {
                 html += '<br><br><img src="assets/img/champion.svg" style="margin: auto; display: block; width: 15em;">';
             }
-            html += "<br><br>You're not watching the credits like a nerd, are you?";
+            html += "<br><br>Ouch, geen 100% huh? Moet je maar lekker die credits kijken. Marvel style";
         html += "</div>";
     html += "</div>";
 
@@ -470,12 +470,12 @@ function paused_movie(array, single) {
                     } else {
                         html += "</b>";
                     }
-                    html += "<br><br>It was paused for " + pause_time + "...";
+                    html += "<br><br>It was paused for " + pause_time + "...Bedankt voor het verkloten van mijn server resources...";
                 html += "</div>";
             } else {
                 html += "<div class='stats'>";
                     html += "One movie, but you still paused it<br>";
-                    html += "<br><br>It was paused for " + pause_time + "...";
+                    html += "<br><br>It was paused for " + pause_time + "...Bedankt voor het verkloten van mijn server resources...";
                 html += "</div>";
             }
         } else {
